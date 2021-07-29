@@ -1,0 +1,144 @@
+@media only screen and (min-width: 480px) {
+  .banner__desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4rem;
+    width: 100%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+  }
+
+  .banner{
+    background: url('../public/img/hero-image_4-medium.jpg') center;
+  }
+
+  .banner__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .banner__subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .resto-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resto-list__no-item {
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar__nav {
+    display: flex;
+  }
+
+  .navbar__hum-button {
+    display: none;
+  }
+
+  .nav__link {
+    padding: 0.5rem;
+  }
+
+  .drawer {
+    display: none !important;
+  }
+
+  .review__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.5rem;
+  }
+
+  .resto-list__no-item {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .nav__link {
+    transition: background-color, transform 200ms ease-in-out;
+  }
+  .banner{
+    background: url('../public/img/hero-image_4-large.jpg') center;
+  }
+
+  .nav__link:hover,
+  .nav__link:focus {
+    transform: scale(1.1);
+  }
+
+  .resto-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .resto-item {
+    transition: transform 200ms ease-in-out;
+  }
+
+  .resto-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  .resto-item:nth-child(3n) {
+    transform-origin: right;
+  }
+
+  .resto-item:nth-child(3n + 1) {
+    transform-origin: left;
+  }
+
+  .resto-item:nth-child(3n + 2) {
+    transform-origin: center;
+  }
+
+  .detail {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detail__img {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    padding: 1rem;
+  }
+  .detail__main {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+
+  .detail__menu {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    border: none;
+  }
+
+  .detail__review {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+
+  .review__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .banner__desc {
+    width: 60%;
+  }
+}
